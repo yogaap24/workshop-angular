@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Search</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)] = "filter.s" name = "s" #s="ngModel">
+    </div>
+      <div *ngFor="let movie of movies, let i = index" class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="movie-card" (click)="showMovie(movie)">
+            <div class="movie-poster"><img src="{{movie.Poster}}" class="img-fluid"></div>
+            <div class="movie-title"> {{movie.Title}}</div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<app-movie-detail *ngIf="selectedMovie" [movie] = "selectedMovie" (onClose)="closeMovie()" class="modal-container"></app-movie-detail>

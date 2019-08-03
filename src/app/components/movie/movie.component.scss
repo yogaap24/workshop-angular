@@ -1,0 +1,12 @@
+@import '../../../styles.scss';
+
+.movie-card {
+  box-shadow: 2px 2px 5px 2px #dcdcdc;
+  margin:  10px 0 10px 0;
+  cursor: pointer;
+}
+
+.movie-title {
+  padding:  10px;
+  background: white;
+}

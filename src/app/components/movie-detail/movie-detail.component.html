@@ -1,0 +1,9 @@
+<div class="movie-card d-flex">
+  <div class="movie-poster"><img src="{{movie.Poster}}" class="img-fluid"></div>
+  <div class="movie-title">
+    <div>{{movie.Title}}</div>
+    <div>Year: {{movie.Year}}</div>
+    <div>Type: {{movie.Type}}</div>
+    <div><button class="btn btn-danger" (click)=closeMovie()>Close</button></div>
+  </div>
+</div>
